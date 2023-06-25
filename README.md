@@ -39,6 +39,7 @@ The following steps will be performed in an infinte loop where appropriate
 - Parsing
 - Execution
 - Waiting
+
 The loop is exited when the built-in exit command is executed or when the end of input is reached. End of input will be interpreted as an implied exit $? command (i.e. smallsh exits with the status of the last foreground command as its own exit status).
 Smallsh can be invoked with no arguments, in which case it reads commands from stdin, or with one argument, in which case the argument specifies the name of a file (script) to read commands from. These will be referred to as interactive and non-interactive mode, respectively.
 In non-interactive mode, smallsh should open its file/script with the CLOEXEC flag, so that child processes do not inherit the open file descriptor.
